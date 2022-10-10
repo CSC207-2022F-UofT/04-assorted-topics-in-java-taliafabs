@@ -50,8 +50,8 @@ public abstract class Trader<T> {
     /* TODO: Implement the method addToWishlist that takes an
      *       object of type T and adds it to this Trader's wishlist.
      */
-    public void addToWishList(T new_object){
-        this.wishlist.add(new_object);
+    public void addToWishList(T item){
+        this.wishlist.add(item);
     }
 
 
@@ -63,9 +63,9 @@ public abstract class Trader<T> {
      *
      *       We will call this in exchangeMoney().
      */
-    public int getSellingPrice(T obj){
-        if (obj isinstanceof Tradable){
-            return ((Tradable) obj).getPrice();
+    public int getSellingPrice(T item){
+        if (item instanceof Tradable){
+            return ((Tradable) item).getPrice();
         }
         return Tradable.MISSING_PRICE;
     }
